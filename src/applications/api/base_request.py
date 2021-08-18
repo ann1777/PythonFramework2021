@@ -26,7 +26,7 @@ class BaseRequest:
 
 
 def post(*args, **kwargs):
-    r = requests.post(*args, *kwargs)
+    r = requests.post(*args, **kwargs)
     logging.DEBUG("sending_requests, *args, **kwargs")
 
     if r.status_code == 409:
